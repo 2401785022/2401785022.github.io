@@ -1,0 +1,14 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "pwa-chrome",
+            "request": "launch",
+            "name": "Open 作業.htm",
+            "file": "/Users/lizhiwei/Documents/GitHub/2401785022.github.io/L353/课堂作业2/作業.htm"
+        }
+    ]
+}
