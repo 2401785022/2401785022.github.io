@@ -24,17 +24,18 @@
 		水果种类:<br><input type="radio" name="fruit" id=“fruit01” value="爱文芒果（1箱）">爱文芒果（1箱）475元<br>
 		<input type="radio" name="ftuit" id="fruit02" value="有机木瓜（6台斤）">有机木瓜（6台斤） 435元<br>
 		<input type="radio" name="ftuit" id="fruit03" value="黑砖石桑葚（5台斤）">黑砖石桑葚（5台斤） 749元<br>
+
 	</forem>>
 	<button onclick="shoppingInfo()"><h4>结账</h4></button>
 	<div id="demo"></div>
 	<script>
-		function shoppingInfo(){
-			var x=document.getElementById("form01");
-			var item="";
+		function shoppingInfo() {
+			var x = document.getElementById("form01");
+			var item=" ";
 			var price =0;
-			var text="<h4>您的购物咨询如下</h4>";
+			var text="<h4>您的购物咨询如下：</h4>";
 			var i;
-			for (i=0; i<1; i++) {
+			for (i = 0; i < 5; i++) {
 				switch(i){
 					case  0:
 					item="姓名：";
@@ -52,17 +53,17 @@
 					item="指定送货日期：";
 					break;	
 				}
-			text+=item+x.elements[i].value+"<br>";
+			text += item+x.elements[i].value + "<br>";
 			}
 for(i=5; i<=7; i++){
 	if (x.elements[i].checked == true) {
 		switch(i){
-			case 5: price=475;break;
-			case 6: price=435;break;
-			case 7: price=749;break;
+			case 5: price=475; break;
+			case 6: price=435; break;
+			case 7: price=749; break;
 		}
-	text +="水果种类：" +x.elements[i].value+"<br>";
-	text +="价格合计：" +price+"元<br>"	;
+	text +="水果种类："  + x.elements[i].value+"<br>";
+	text +="价格合计："  + price + "元<br>"	;
 	}	
 }
 document.getElementById("demo").innerHTML= text;
