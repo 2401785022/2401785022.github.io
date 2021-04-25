@@ -15,10 +15,11 @@
 		}
 
 	</style>
+
 </head>
 <body>
-	<form id="form01">
-		姓名：<input type="text" name+"name01" value="rockli"><br>
+<form id="form01">
+		姓名：<input type="text" name="name01" value="rockli"><br>
 		收件住址：<input type="text" name="address01" value="德慧街三项三号"><br>
 		电话:<input type="tel" name="tel01" value="2401785022@qq.com"><br>
 		指定送货日期:<input typle="date01" name="date01"><br>
@@ -32,33 +33,33 @@
 	<button onclick="shoppingInfo()"><h4>结账</h4></button>
 	<div id="demo"></div>
 	<script>
-		function shoppingInfo(){
+		function shoppingInfo() {
 			var x =document.getElementById("form01");
 			var item ="";
-			var price =0;
+			var price = 0;
 			var text ="<h4>您的购物咨询如下:</h4>";
 			var i;
 			for(i = 0; i < 5; i++) {
 				switch(i) {
-					case 0:
+				case 0:
 					item = "名字:";
 					break;
-					case 1:
+				case 1:
 					item ="姓名住址:";
 					break;
-					case 2:
+				case 2:
 					item ="电话:";
 					break;
-					case 3:
+				case 3:
 					item ="电子邮件:";
 					break;
-					case 4:
+				case 4:
 					item ="指定送货日期:";
 					break;
 				}
-				text +=item +x.elements[i].value + "<br>";
+				text += item + x.elements[i].value + "<br>";
 			}
-		for(i = 5; i < 9; i++) {
+		for(i = 5; i <= 9; i++) {
 			if(x.elements[i].checked == true){
 				switch(i){
 					case 5: price=100; breack;	
