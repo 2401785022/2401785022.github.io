@@ -22,7 +22,7 @@
 		姓名：<input type="text" name="name01" value="rockli"><br>
 		收件住址：<input type="text" name="address01" value="德慧街三项三号"><br>
 		电话:<input type="tel" name="tel01" value="2401785022@qq.com"><br>
-		指定送货日期:<input typle="date01" name="date01"><br>
+		指定送货日期: <input typle="date" name="date01"><br>
 		商品种类:<br><input type="radio" name="fruit" id="fruit01" value="芒果">芒果 400元<br>
 		<input type="radio" name="fruit" id="fruit02" value="香蕉">香蕉 100元<br>
 		<input type="radio" name="fruit" id="fruit03" value="栗子">栗子 200元<br>
@@ -57,7 +57,7 @@
 					item ="指定送货日期:";
 					break;
 				}
-				text += item + x.elements[i].value + "<br>";
+			text += item + x.elements[i].value + "<br>";
 			}
 		for(i = 5; i <= 9; i++) {
 			if(x.elements[i].checked == true){
