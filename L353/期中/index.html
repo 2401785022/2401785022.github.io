@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn_{
+            color: red;
+            width: 80px;
+            height: 80px;
+            background-color: #bbbbb9;
+            line-height: 80px;
+            font-weight: 550;
+            text-align: center;
+            cursor: pointer;
+            border: solid 1px #f7f7f7;
+        }
+    </style>
+</head>
+<body>
+    <div class="contentbox">
+  <div class="item_">
+     姓名： <input type="text" class="name">
+  </div>
+  <div class="item_">
+    收件地址： <input type="text" class="address">
+ </div>
+
+ <div class="item_">
+    电话： <input type="text" class="phone">
+ </div>
+
+
+ <div class="item_">
+    电子邮件： <input type="email" class="email">
+ </div>
+
+ 
+ <div class="item_">
+    指定送达日期： <input type="date" class="date">
+ </div>
+
+ <div class="item_">
+     <div>水果种类:</div>
+     <div class="item_a" >
+         <input type="radio" id="dri" name="furit" value="0" >爱文芒果（1箱）475元
+        
+     </div>
+
+     <div class="item_a" >
+        <input type="radio" id="dri" name="furit" value="1" checked >苹果（6斤）25元
+    </div>
+
+    <div>
+        <input type="radio" id="dri" name="furit" value="2" >梨子（12斤）205元
+    </div>
+
+    <div>
+        <input type="radio" id="dri" name="furit" value="3" >葡萄（6斤）475元
+    </div>
+     
+   
+     <input type="radio" id="dri" name="furit" value="4" >车厘子（1箱）8885元
+     
+ </div>
+
+
+<div class="btn_">
+    结账
+</div>
+
+<div class="a">
+    <h1 style="color: red;">您的购物资料如下</h1>
+</div>
+
+<div class="tablebox" style="color: blue;">
+
+<table>
+    <table border="1">
+        <tr>
+          <th>姓名</th>
+          <th>小王</th>
+        </tr>
+        <tr>
+          <td>收件地址</td>
+          <td>$100</td>
+        </tr>
+
+        <tr>
+            <td>电话</td>
+            <td>17606112001</td>
+          </tr>
+          <tr>
+            <td>电子邮件</td>
+            <td>25981999@qq.com</td>
+          </tr>
+
+          <tr>
+            <td>电子邮件</td>
+            <td>25981999@qq.com</td>
+          </tr>
+          <tr>
+            <td>指定送达日期</td>
+            <td>2020 09 18 </td>
+          </tr>
+
+          <tr>
+            <td>水果重量</td>
+            <td>葡萄（6斤）475元</td>
+          </tr>
+          
+          <tr>
+            <td>价格合计</td>
+            <td>475元</td>
+          </tr>
+      </table>
+
+
+
+</div>
+
+
+    </div>
+
+
+    <script>
+
+var btn=document.querySelector('.btn_')
+
+var tablebox=document.querySelector('.tablebox')
+
+btn.onclick=function(){
+
+    var name=document.querySelector('.name').value
+   
+var address=document.querySelector('.address').value
+var phone=document.querySelector('.phone').value
+var email=document.querySelector('.email').value
+var date=document.querySelector('.date').value
+var furit=document.querySelector("input[name='furit']:checked").value
+var furitarr=[
+    {name:'爱文芒果（1箱）475元',price:475},
+    {name:'苹果（6斤）25元',price:25},
+    {name:'梨子（12斤）205元',price:205},
+    {name:'葡萄（6斤）475元',price:475},
+    {name:'车厘子（1箱）8885元',price:8885},
+]
+
+
+var html=`
+<table border="1">
+        <tr>
+          <th>姓名</th>
+          <th>${name}</th>
+        </tr>
+        <tr>
+          <td>收件地址</td>
+          <td>${address}</td>
+        </tr>
+
+        <tr>
+            <td>电话</td>
+            <td>${phone}</td>
+          </tr>
+          <tr>
+            <td>电子邮件</td>
+            <td>${email}</td>
+          </tr>
+
+          
+          <tr>
+            <td>指定送达日期</td>
+            <td>${date} </td>
+          </tr>
+
+          <tr>
+            <td>水果重量</td>
+            <td>${furitarr[furit].name}</td>
+          </tr>
+          
+          <tr>
+            <td>价格合计</td>
+            <td>${furitarr[furit].price}元</td>
+          </tr>
+      </table>`
+
+      tablebox.innerHTML=html
+console.log(furit)
+}
+    </script>
+</body>
+</html>
