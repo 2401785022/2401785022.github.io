@@ -16,18 +16,19 @@ div {
 </head>
 <body>
 <form id="form01">
-姓名: <input type="text" name="name01" value="王光正"><br>
-收件住址: <input type="text" name="address01" value="新北市樹林區中華路281號7樓之四"><br>
-電話: <input type="tel" name="tel01" value="0936676981"><br>
-電子郵件: <input type="email" name="email01" value="kcwang@gm.ttu.edu.tw"><br>
-指定送貨日期: <input type="date" name="date01 "><br
-水果種類: <br><input type="checkbox" name="fruit" id="fruit01" value="愛文芒果(1箱)">愛文芒果(1箱) 475元;
-購買數量: <input type="number" name="number01"><br>
-<input type="checkbox" name="fruit" id="fruito2" value="有機木瓜(6台斤)">有機木瓜(6台斤) 435元;
-購買數量: <input type="number" name="number02"><br>
-<input type="checkbox" name="fruit" id="fruito3" value="黑鑽石桑甚(5台斤)">黑鑽石桑甚(5台斤) 749元;
-购買數量: <input type="number" name="number03"><br>
+    姓名: <input type="text" name="name01" value="王光正"><br>
+    收件住址: <input type="text" name="address01" value="新北市樹林區中華路281號7樓之四"><br>
+    電話: <input type="tel" name="tel01" value="0936676981"><br>
+    電子郵件: <input type="email" name="email01" value="kcwang@gm.ttu.edu.tw"><br>
+    指定送貨日期: <input type="date" name="date01 "><br
+    水果種類: <br><input type="checkbox" name="fruit" id="fruit01" value="愛文芒果(1箱)">愛文芒果(1箱) 475元;
+    購買數量: <input type="number" name="number01"><br>
+    <input type="checkbox" name="fruit" id="fruito2" value="有機木瓜(6台斤)">有機木瓜(6台斤) 435元;
+    購買數量: <input type="number" name="number02"><br>
+    <input type="checkbox" name="fruit" id="fruito3" value="黑鑽石桑甚(5台斤)">黑鑽石桑甚(5台斤) 749元;
+    购買數量: <input type="number" name="number03"><br>
 </form>
+
 <button onclick="shoppingInfo()"><h4>結帳</h4></button>
 <div id="demo"></div>
 <script>
@@ -40,7 +41,7 @@ div {
 			text +="價格小計：" + this.Price * no +"元<br>";
 		};
 	};
-    var  fruit01 = new Fruit ("愛文芒果(1箱)",475, 0);
+    var fruit01 = new fruit ("愛文芒果(1箱)",475, 0);
 	var fruito2 = new fruit("有機木瓜(6台斤)",435, 0);
 	var fruito3 = new fruit("黑鑽石桑甚(5台斤)",749, 0);
 function shoppingInfo() {
@@ -56,7 +57,7 @@ function shoppingInfo() {
           case 3: item = "電子郵件: "; break;
           case 4: item ="指定送貨日期: "; break;
         }
-text += item +x.elements[i].value + "<br>";
+        text += item +x.elements[i].value + "<br>";
     }
 for (i=5; ic=9; i++) {
     if (x.elements[i].checked === true){ 
@@ -76,8 +77,8 @@ for (i=5; ic=9; i++) {
         }
     }
 }
-         text += "價格合計: " + sumToPay + "元<br>";
-         document. getElementById ("demo").innerHTML = text;
+        text += "價格合計: " + sumToPay + "元<br>";
+        document. getElementById ("demo").innerHTML = text;
     }  
 </script>
 </body>
